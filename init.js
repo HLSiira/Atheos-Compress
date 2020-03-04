@@ -17,7 +17,7 @@
 
 	codiad.Compress = {
 
-		path: curpath,
+		path: '/plugins/Atheos-Compress/',
 		file: "",
 		settings: false,
 

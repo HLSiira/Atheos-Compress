@@ -2,7 +2,7 @@
     require_once('../../common.php');
 ?>
 <div class="compress_settings">
-    <label><span class="icon-brush big-icon"></span>Compress Settings</label>
+    <label><span class="fas fa-compress"></span>Compress Settings</label>
     <hr>
     <table class="settings">
         <tr>
