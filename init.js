@@ -25,15 +25,15 @@
 			var _this = this;
 			$.getScript(this.path + "libs/uglifyjs.js");
 			$.getScript(this.path + "libs/cssmin.js");
-			amplify.subscribe("context-menu.onShow", function(obj) {
+			amplify.subscribe("contextmenu.show", function(obj) {
 				var ext = _this.getExtension(obj.path);
 				if (ext == "css" || ext == "js") {
-					$('#context-menu').append('<hr class="file-only compress">');
-					$('#context-menu').append('<a class="file-only compress" onclick="codiad.Compress.compress($(\'#context-menu\').attr(\'data-path\'));"><span class="icon-feather"></span>Compress</a>');
+					obj.menu.append('<hr class="file-only compress">');
+					obj.menu.append('<a class="file-only compress" onclick="codiad.Compress.compress($(\'#contextmenu\').attr(\'data-path\'));"><i class="fas fa-compress"></i>Compress</a>');
 				}
 			});
 
-			amplify.subscribe("context-menu.onHide", function() {
+			amplify.subscribe("contextmenu.hide", function() {
 				$('.compress').remove();
 			});
 			amplify.subscribe('active.onOpen', function(path) {
